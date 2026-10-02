@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "fit": true,
+      "missing_during_replay": 0,
+      "missing_final": 0,
+      "remaining": 0,
+      "fitness": 1.0,
+      "marking": {
+        "start": 0,
+        "goods_wait": 0,
+        "invoice_wait": 0,
+        "invoice_done": 0,
+        "goods_done": 0,
+        "end": 1
+      },
+      "violations": [],
+      "case_id": "valid"
+    },
+    {
+      "fit": false,
+      "missing_during_replay": 2,
+      "missing_final": 0,
+      "remaining": 2,
+      "fitness": 0.5,
+      "marking": {
+        "start": 0,
+        "goods_wait": 1,
+        "invoice_wait": 1,
+        "goods_done": 0,
+        "invoice_done": 0,
+        "end": 1
+      },
+      "violations": [
+        {
+          "position": 1,
+          "event": "pay",
+          "reason": "missing_token",
+          "place": "goods_done",
+          "count": 1
+        },
+        {
+          "position": 1,
+          "event": "pay",
+          "reason": "missing_token",
+          "place": "invoice_done",
+          "count": 1
+        }
+      ],
+      "case_id": "missing"
+    }
+  ],
+  "variants": [
+    {
+      "activities": [
+        "open",
+        "invoice",
+        "goods",
+        "pay"
+      ],
+      "cases": 1,
+      "case_ids": [
+        "valid"
+      ]
+    },
+    {
+      "activities": [
+        "open",
+        "pay"
+      ],
+      "cases": 1,
+      "case_ids": [
+        "missing"
+      ]
+    }
+  ],
+  "fit_pct": 50.0
+}

@@ -1,0 +1,7 @@
+[project]
+name = "process-conformance-miner"
+version = "0.1.0"
+description = "Süreç Uygunluk ve Varyant Analizi"
+requires-python = ">=3.12"
+[tool.ruff]
+line-length = 120

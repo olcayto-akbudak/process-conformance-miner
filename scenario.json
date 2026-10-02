@@ -1,0 +1,62 @@
+{
+  "transitions": {
+    "open": {
+      "consume": {
+        "start": 1
+      },
+      "produce": {
+        "goods_wait": 1,
+        "invoice_wait": 1
+      }
+    },
+    "goods": {
+      "consume": {
+        "goods_wait": 1
+      },
+      "produce": {
+        "goods_done": 1
+      }
+    },
+    "invoice": {
+      "consume": {
+        "invoice_wait": 1
+      },
+      "produce": {
+        "invoice_done": 1
+      }
+    },
+    "pay": {
+      "consume": {
+        "goods_done": 1,
+        "invoice_done": 1
+      },
+      "produce": {
+        "end": 1
+      }
+    }
+  },
+  "initial": {
+    "start": 1
+  },
+  "final": {
+    "end": 1
+  },
+  "cases": [
+    {
+      "id": "valid",
+      "trace": [
+        "open",
+        "invoice",
+        "goods",
+        "pay"
+      ]
+    },
+    {
+      "id": "missing",
+      "trace": [
+        "open",
+        "pay"
+      ]
+    }
+  ]
+}

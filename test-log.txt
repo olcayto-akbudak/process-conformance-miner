@@ -1,0 +1,13 @@
+test_bad_arc (test_core.CoreTests.test_bad_arc) ... ok
+test_duplicate_activity (test_core.CoreTests.test_duplicate_activity) ... ok
+test_duplicate_cases (test_core.CoreTests.test_duplicate_cases) ... ok
+test_incomplete (test_core.CoreTests.test_incomplete) ... ok
+test_missing (test_core.CoreTests.test_missing) ... ok
+test_negative_marking (test_core.CoreTests.test_negative_marking) ... ok
+test_parallel (test_core.CoreTests.test_parallel) ... ok
+test_unknown (test_core.CoreTests.test_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+OK
